@@ -1,0 +1,4 @@
+# Extra autostart processes
+# exec-once = uwsm-app -- my-service
+exec-once = [workspace 10 silent; fullscreen] omarchy-launch-webapp "https://music.youtube.com/"
+exec-once = [workspace 1 silent] zen-browser
