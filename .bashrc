@@ -11,9 +11,14 @@ export PATH="/home/virus/Dev/flutter/bin:$PATH"
 
 # Make an alias for invoking commands you use constantly
 # alias p='python'
+alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # opencode
 export PATH=/home/virus/.opencode/bin:$PATH
 . "$HOME/.cargo/env"
 
-alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+# Following line was automatically added by arttime installer
+export MANPATH=/home/virus/.local/share/man:$MANPATH
+
+# Following line was automatically added by arttime installer
+export PATH=/home/virus/.local/bin:$PATH
