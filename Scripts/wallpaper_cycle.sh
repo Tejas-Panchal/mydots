@@ -1,0 +1,50 @@
+#!/bin/bash
+# set wallpaper directory
+wallpaperDir="$HOME/Wallpapers"
+
+#infinite loop to cycle through images
+play_images() {
+  while true; do
+    # select a random image
+    file=$(ls "$wallpaperDir"/*.{jpg,png} 2>/dev/null | shuf -n1)
+    swww img "$file" --transition-type random
+    sleep 1m
+  done
+}
+
+#infinite loop to cycle through gifs
+play_gifs() {
+  while true; do
+    #select a random gif
+    file=$(ls "$wallpaperDir"/*.gif 2>/dev/null | shuf -n1)
+    swww img "$file" --transition-type random
+    sleep 30m
+  done
+}
+
+#infinite loop to cycle through all files
+play_all() {
+  while true; do
+    #select a random file
+    file=$(ls "$wallpaperDir"/*.{jpg,png,gif} 2>/dev/null | shuf -n1)
+    swww img "$file" --transition-type random
+    sleep 30m
+  done
+}
+
+show_help() {
+  echo "-image -> loop through only images"
+  echo "-live   -> loop through only gifs"
+  echo "-all    -> loop through all"
+}
+
+case "$1" in
+  -image) play_images
+    ;;
+  -live) play_gifs
+    ;;
+  -all) play_all
+    ;;
+  *|-h) show_help
+    ;;
+esac
