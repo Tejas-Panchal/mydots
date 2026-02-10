@@ -69,10 +69,10 @@ show_help ()
 {
   echo -e "simple bash to-do list"
   echo "usage:"
-  echo "  $0 -l               -> show all tasks"
-  echo "  $0 -a \"task name\" 	-> add a new task"
-  echo "  $0 -d <number>      -> mark a task as done (remove it)"
-  echo "  $0 -c               -> remove all tasks"
+  echo "  -l               -> show all tasks"
+  echo "  -a \"task name\"   -> add a new task"
+  echo "  -d <number>      -> mark a task as done (remove it)"
+  echo "  -c               -> remove all tasks"
 }
 
 case "$1" in

@@ -33,7 +33,7 @@ play_all() {
 }
 
 show_help() {
-  echo "-image -> loop through only images"
+  echo "-image  -> loop through only images"
   echo "-live   -> loop through only gifs"
   echo "-all    -> loop through all"
 }
