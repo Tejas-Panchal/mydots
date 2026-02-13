@@ -2,6 +2,12 @@
 # set wallpaper directory
 wallpaperDir="$HOME/Wallpapers"
 
+if ! pgrep -x "swww-daemon" > /dev/null; then
+  echo "Starting swww-daemon..."
+  swww-daemon &
+  sleep 1
+fi
+
 #infinite loop to cycle through images
 play_images() {
   while true; do
