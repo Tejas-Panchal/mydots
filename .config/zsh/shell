@@ -1,0 +1,9 @@
+# History control
+setopt APPEND_HISTORY        # Append to history file (zsh equivalent of histappend)
+setopt HIST_IGNORE_DUPS      # Ignore duplicate commands
+setopt HIST_IGNORE_SPACE     # Ignore commands starting with space
+HISTSIZE=32768
+SAVEHIST=32768
+# Disable command hashing for mise
+setopt NO_HASH_CMDS
+setopt NO_HASH_DIRS

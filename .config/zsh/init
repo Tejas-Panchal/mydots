@@ -1,0 +1,25 @@
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"    # Changed: bash → zsh
+fi
+if command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"    # Changed: bash → zsh
+fi
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh)"      # Changed: bash → zsh
+fi
+if command -v try &> /dev/null; then
+  eval "$(try init ~/Work/tries)"
+fi
+# FZF integration for zsh
+if command -v fzf &> /dev/null; then
+  if [[ -f /usr/share/fzf/completion.zsh ]]; then
+    source /usr/share/fzf/completion.zsh
+  fi
+  if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+    source /usr/share/fzf/key-bindings.zsh
+  fi
+fi
+
+# autosuggestions and syntax-highlighting
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,0 +1,16 @@
+# Editor used by CLI
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=ansi
+
+# Your personal environment variables from .bashrc
+export ANDROID_HOME="/home/virus/Dev/Android/sdk"
+export PATH=$PATH:/home/virus/Dev/flutter/bin
+export PATH=$PATH:/home/virus/Dev/Android/sdk/platform-tools/
+export PATH=$PATH:/home/virus/.opencode/bin
+export MANPATH=/home/virus/.local/share/man:$MANPATH
+export PATH=/home/virus/.local/bin:$PATH
+export PATH=/home/virus/Scripts:$PATH
+export PATH=$PATH:$HOME/.local/share/go/bin
+
+# Cargo/Rust
+. "$HOME/.cargo/env"
