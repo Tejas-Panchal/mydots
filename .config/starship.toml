@@ -1,6 +1,23 @@
 add_newline = false
 command_timeout = 200
-format = "$python[$directory$git_branch$git_status]($style)$character"
+format = """
+$hostname\
+$sudo\
+$username\
+[$directory$git_branch$git_status]($style)\
+$character"""
+right_format = """
+$python\
+$dart\
+$bun\
+$golang\
+$java\
+$kotlin\
+$lua\
+$nodejs\
+$rust\
+$shell\
+"""
 
 [character]
 error_symbol = "[✗](bold cyan)"
@@ -26,10 +43,47 @@ conflicted = " "
 up_to_date = " "
 untracked  = "? "
 modified   = " "
-stashed    = ""
-staged     = ""
+stashed    = "\\$ "
+staged     = "+ "
 renamed    = ""
-deleted    = ""
+deleted    = "✘ "
 
 [python]
-format     = '[${virtualenv} ]($style)'
+format = '\[[py ${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+
+[bun]
+format = '\[[bun ($version)]($style)\]'
+
+[dart]
+format = '\[[dart ($version)]($style)\]'
+
+[golang]
+format = '\[[go ($version)]($style)\]'
+
+[hostname]
+format = '\[[$ssh_symbol($hostname)]($style)\] '
+
+[java]
+format = '\[[java ($version)]($style)\]'
+
+[kotlin]
+format = '\[[kts ($version)]($style)\]'
+
+[lua]
+format = '\[[lua ($version)]($style)\]'
+
+[nodejs]
+format = '\[[node ($version)]($style)\]'
+
+[rust]
+format = '\[[rs ($version)]($style)\]'
+
+[shell]
+format = '\[[sh $indicator]($style)\]'
+
+[sudo]
+format = '\[[as $symbol]($style)\]'
+
+[username]
+format = '\[[$user]($style)\]'
+
